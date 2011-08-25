@@ -13,7 +13,19 @@ http://stackoverflow.com/questions/5901400/warning-nokogiri-was-built-against-li
 Code:
 gem install --no-rdoc --no-ri nokogiri -- --with-xml2-include=/opt/local/include/libxml2 --with-xml2-lib=/opt/local/lib
 
-Sprockets::Environment#static_root is deprecated
+8/25/2011
+Problem: Sprockets::Environment#static_root is deprecated
+Solution: Changed Gemfile 
+From:
+  gem 'rails', '3.1.0.rc6'
+To:
+   gem 'rails', :git => 'http://github.com/rails/rails.git', :branch => '3-1-stable'
+The author of the sprockets program has made some changes that are only available in edge.
+
+bundle show
+shows where edge rail respository is
+/Users/oserj/.rvm/gems/ruby-1.9.2-p180@rails31pre/bundler/gems/rails-933120cdfe46
+
 Rails is a web-application framework that includes everything needed to create
 database-backed web applications according to the Model-View-Control pattern.
 
