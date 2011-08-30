@@ -1,6 +1,9 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0.rc6'
+# To avoid getting javascript errors in rails 3.1.0.rc6
+# http://stackoverflow.com/questions/6282307/rails-3-1-execjs-and-could-not-find-a-javascript-runtime
+gem 'therubyracer'
 # gem 'rails', :git => 'http://github.com/rails/rails.git', :branch => '3-1-stable'
 
 # Bundle edge Rails instead:
